@@ -26,9 +26,9 @@
 
 
 syntax region vcsiLog keepend start=/^\%^/ end=/^=== .* ===$/me=s-1
-syntax match vcsiLongSummary /^.\{50}\zs.*$/ containedin=vcsiSummary
+syntax match vcsiLongSummary /^.\{50}\zs.*$/ contained containedin=vcsiSummary
 syntax match vcsiSeparator /^=== .* ===$/
-syntax match vcsiSummary /^\%1l.*$/ containedin=vcsiLog
+syntax match vcsiSummary /^\%1l.*$/ contained containedin=vcsiLog
 
 
 
